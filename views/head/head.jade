@@ -1,0 +1,12 @@
+head
+   title= title
+   link(rel='stylesheet', href='/stylesheets/base.css')
+   case targetPage
+      when 0
+         link(rel='stylesheet', href='/stylesheets/login.css')
+      when 1
+         link(rel='stylesheet', href='/stylesheets/home.css')
+      default
+         link(rel='stylesheet', href='/stylesheets/login.css')
+   script(src="/javascripts/jquery-2.1.1.min.js")
+   script(src="/javascripts/layer/layer.js")

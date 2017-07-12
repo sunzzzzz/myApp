@@ -16,11 +16,11 @@ router
            res.render('index', { title: 'Express' });
     })
     .get("/login",function(req,res,next){
-         res.render('login');
+         res.render('login',{targetPage:0});
     })
    .get("/home",function(req,res,next){
         if(isLoginIn(req)){
-            res.render('home',{username:req.session.user_data.username});
+            res.render('home',{username:req.session.user_data.username,targetPage:1});
         }else{
            res.redirect("/login")
         }
